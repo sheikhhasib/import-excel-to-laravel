@@ -2,7 +2,7 @@
 
 namespace App\Imports;
 
-use App\Contact;
+use App\Product;
 use Maatwebsite\Excel\Concerns\ToModel;
 
 class ImportContacts implements ToModel
@@ -14,7 +14,7 @@ class ImportContacts implements ToModel
     */
     public function model(array $row)
     {
-        return new Contact([
+        return new Product([
             'product_name'     => @$row[0],
             'product_category'    => @$row[1],
             'product_brand'    => @$row[2],
